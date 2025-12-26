@@ -13,7 +13,8 @@
 
 GaussianDWM addresses three core challenges in autonomous driving world models:
 
-- **🔧 Token Extraction & Projection**: Novel module for 3D Gaussian scene representations with task-aware language-guided sampling that overcomes gaussian alignment and token length limitations while preserving essential spatial information
+- **🔧 3D Gaussian Token Extraction & Projection**: We propose a novel 3D scene representation that aligns language features with geometric information through 3D Gaussian representation. This enables explicit correspondence and alignment between language and scene geometry.
+- **🔧 Task-aware Sampling**:  task-aware language-guided sampling for 3D Gaussian ellipsoids that overcomes Gaussian alignment and token length limitations while preserving essential spatial information
 - **🎨 Dual-condition Generation**: Multi-modal scene generation framework combining high-level features from world knowledge with low-level features from images
 - **🔗 Unified Understanding & Generation**: Bridges the gap between scene comprehension and generation, enabling accurate understanding and coherent future scene prediction
 
@@ -26,10 +27,10 @@ GaussianDWM addresses three core challenges in autonomous driving world models:
 | Feature | Description |
 |-----------|-------------|
 | **Unified Framework** | First 3D Gaussian-based world model supporting both scene understanding and generation |
-| **Semantic Space Alignment** | Aligns 3D Gaussian features to the semantic space of LLM for accurate cross-modal understanding |
+| **Lauguage Space Alignment** | Aligns 3D Gaussian features to the semantic space of LLM for accurate cross-modal understanding |
 | **Task-aware Sampling** | Language-guided sampling strategy selects relevant Gaussians from dense representations |
-| **Dual-condition Generation** | High-level language features and low-level image features jointly guide multi-modal synthesis |
-| **Spatial & Temporal** | Supports novel view synthesis (1m/2m shifts) and future prediction (1s/2s ahead) |
+| **Dual-condition** | High-level language features and low-level image features jointly guide multi-modal synthesis |
+| **Spatial & Temporal Generation** | Supports novel view synthesis (1m/2m shifts) and future prediction (1s/2s ahead) |
 
 ---
 
@@ -83,3 +84,4 @@ We would like to thank the following open-source projects:
 </div>
 
  
+
