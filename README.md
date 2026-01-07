@@ -30,6 +30,7 @@ GaussianDWM addresses three core challenges in autonomous driving world models:
 | **Task-aware Sampling** | Language-guided sampling strategy selects relevant Gaussians from dense representations |
 | **Dual-condition Generation** | High-level language features and low-level image features jointly guide multi-modal synthesis |
 | **Spatial & Temporal** | Supports novel view synthesis (1m/2m shifts) and future prediction (1s/2s ahead) |
+| **Large-scale 3DGS-QA Dataset** | First large-scale dataset pairing 3D Gaussian features with diverse driving QA tasks (~2M samples) |
 
 ---
 
@@ -46,9 +47,11 @@ GaussianDWM addresses three core challenges in autonomous driving world models:
 
 ---
 
-## � Dataset
+## 📦 Dataset
 
-GaussianDWM dataset is built upon [nuScenes](https://www.nuscenes.org/) and processed with [LangSplat](https://github.com/minghanqin/LangSplat) to extract 3D Gaussian features for each scene frame. We provide multi-modal QA data covering diverse driving scenarios across three main categories.
+**We introduce the first large-scale dataset that pairs 3D Gaussian Splatting features with diverse language-based driving tasks**, encompassing ~1.9M training samples and ~358K test samples across scene understanding, trajectory prediction, and multi-modal reasoning.
+
+The dataset is built upon [nuScenes](https://www.nuscenes.org/) and processed with [LangSplat](https://github.com/minghanqin/LangSplat) to extract language-aligned 3D Gaussian features for each scene frame. Each sample contains multi-view images, corresponding 3D Gaussian features (`.pth` files), and structured QA annotations covering diverse driving scenarios.
 
 ### Dataset Overview
 
@@ -145,7 +148,7 @@ For detailed information, please refer to [src/data/README_omni.md](src/data/REA
 
 ---
 
-## �📚 Citation
+## 📚 Citation
 
 If you find our work useful in your research, please consider citing:
 
