@@ -42,7 +42,7 @@ GaussianDWM addresses three core challenges in autonomous driving world models:
 
 ## 💥 News
 
-- [2025/12]: Paper and code coming soon!
+- [2025/12]: Code is coming soon!
 
 
 ---
@@ -185,3 +185,4 @@ We would like to thank the following open-source projects:
 </div>
 
  
+
