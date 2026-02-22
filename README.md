@@ -1,6 +1,4 @@
-# GaussianDWM: 3D Gaussian Driving World Model for Unified Scene Understanding and Multi-Modal Generation
-
-[CVPR 2026]
+# GaussianDWM: 3D Gaussian Driving World Model for Unified Scene Understanding and Multi-Modal Generation [CVPR 2026]
 
 
 [![Paper](https://img.shields.io/badge/Paper-Arxiv-red)](http://arxiv.org/abs/2512.23180)
@@ -188,6 +186,7 @@ We would like to thank the following open-source projects:
 </div>
 
  
+
 
 
 
