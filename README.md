@@ -2,7 +2,7 @@
 
 
 [![Paper](https://img.shields.io/badge/Paper-Arxiv-red)](http://arxiv.org/abs/2512.23180)
-[![Huggingface](https://huggingface.co/datasets/huggingface/badges/resolve/main/follow-us-on-hf-sm.svg)]()
+[![Huggingface Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Hugging%20Face-yellow)](https://huggingface.co/datasets/xushan/GaussianDWM)
 <!-- [![License](https://img.shields.io/badge/License-Apache%202.0-orange)](LICENSE) -->
 
 
@@ -145,7 +145,14 @@ For detailed information, please refer to [src/data/README_omni.md](src/data/REA
 
 ### Download
 
-> **Note**: Instructions for downloading the complete dataset will be provided upon paper acceptance.
+The dataset is available on Hugging Face: **[xushan/GaussianDWM](https://huggingface.co/datasets/xushan/GaussianDWM)**
+
+```bash
+pip install huggingface_hub
+huggingface-cli download xushan/GaussianDWM --repo-type dataset --local-dir ./data
+```
+
+> **Note**: For the complete dataset including nuScenes raw data and 3D Gaussian features, please follow the instructions on the Hugging Face dataset page.
 
 ---
 
