@@ -3,6 +3,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-Arxiv-red)](http://arxiv.org/abs/2512.23180)
 [![Huggingface Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Hugging%20Face-yellow)](https://huggingface.co/datasets/xushan/GaussianDWM)
+[![Huggingface Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20DatasetGaussianSampled-Hugging%20Face-blue)](https://huggingface.co/datasets/xushan/GaussianDWM-sampled)
 <!-- [![License](https://img.shields.io/badge/License-Apache%202.0-orange)](LICENSE) -->
 
 
