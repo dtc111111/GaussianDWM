@@ -1,0 +1,9 @@
+pred_source: latest
+eval_id: auto
+task_filter: [qa]
+dataset_filter: [qa_val]
+qa:
+  enabled_groups: [NuInteract_2DVG, NuInteract_3DVG, NuInteract_RD&P, NuInteract_Caption, NuInteract_Planning]
+  text_metrics_batch_size: 100
+failure_export:
+  max_per_task: 50

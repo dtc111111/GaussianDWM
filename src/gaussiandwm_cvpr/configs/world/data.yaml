@@ -1,0 +1,24 @@
+gauss:
+  pose_dir:
+  pose_template: "{scene_id}.txt"
+  utility_path:
+
+world:
+  with_valid_mask: true
+  require_target_latents: true
+
+datasets:
+  world_train:
+    major_task: world
+    split: train
+    annotation_path: world_train.jsonl
+    annotation_root: examples/dummy_data
+    image_root: examples/dummy_data
+    gauss_root: examples/dummy_data
+  world_val:
+    major_task: world
+    split: val
+    annotation_path: world_val.jsonl
+    annotation_root: examples/dummy_data
+    image_root: examples/dummy_data
+    gauss_root: examples/dummy_data

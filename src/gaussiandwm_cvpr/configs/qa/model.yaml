@@ -1,0 +1,19 @@
+model_id: dtc111/GaussianDWM
+revision: main
+subfolder:
+
+lora:
+  enabled: true
+  qwen:
+    enabled: true
+    rank: 16
+    alpha: 32
+    dropout: 0.05
+    backbone_target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+    lm_head_target_modules: [lm_head]
+  world_unet:
+    enabled: false
+    rank: 8
+    alpha: 16
+    dropout: 0.05
+    target_modules: [to_q, to_k, to_v, to_out.0]

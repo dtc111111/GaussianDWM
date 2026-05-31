@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaussiandwm-cvpr"
+version = "0.1.0"
+description = "CVPR release code for GaussianDWM QA and world-generation chains."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "accelerate>=1.7,<2",
+  "diffusers>=0.25,<0.35",
+  "huggingface-hub>=0.36,<1",
+  "numpy>=2.0,<3",
+  "packaging>=25,<26",
+  "peft>=0.17,<1",
+  "pillow>=12,<13",
+  "pyyaml>=6,<7",
+  "qwen-vl-utils>=0.0.8,<0.1",
+  "safetensors>=0.6,<1",
+  "scipy>=1.15,<2",
+  "timm>=1.0,<2",
+  "torch>=2.6,<3",
+  "torchvision>=0.21,<1",
+  "tqdm>=4.67,<5",
+  "transformers>=4.57,<5",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3,<9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+gaussiandwm_cvpr = [
+  "configs/qa/*.yaml",
+  "configs/world/*.yaml",
+  "examples/README.md",
+  "examples/dummy_data/**/*.jsonl",
+  "examples/dummy_data/**/*.npy",
+  "examples/dummy_data/**/*.npz",
+  "examples/dummy_data/**/*.pth",
+  "examples/dummy_data/**/*.png",
+  "examples/dummy_data/**/*.dat",
+  "examples/dummy_data/**/*.json",
+]

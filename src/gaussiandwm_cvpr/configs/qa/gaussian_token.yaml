@@ -1,0 +1,17 @@
+coarse_method: voxel_topk
+coarse_k: 4096
+fine_method: similarity
+fine_k:
+  qa: 512
+  world: 512
+enabled_by_task:
+  qa: true
+  world: true
+cache_root: outputs/cache/gauss
+normalizer_version: v2
+max_supported_fine_k: 4096
+gumbel_tau_start: 1.0
+gumbel_tau_end: 0.5
+gumbel_tau_anneal_steps: 20000
+selector_noise_mode: train_only
+placeholder_token: "<|gaussian_pad|>"

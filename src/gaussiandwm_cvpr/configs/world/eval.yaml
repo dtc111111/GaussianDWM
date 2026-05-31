@@ -1,0 +1,9 @@
+pred_source: latest
+eval_id: auto
+task_filter: [world]
+dataset_filter: [world_val]
+world:
+  rgb_metrics: [psnr, ssim, lpips]
+  depth_metrics: [abs_rel, rmse]
+failure_export:
+  max_per_task: 50

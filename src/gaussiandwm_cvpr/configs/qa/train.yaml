@@ -1,0 +1,30 @@
+seed: 42
+max_steps: 1500
+logging_steps: 50
+num_workers: 4
+per_device_batch_size:
+  qa: 4
+optimizer:
+  name: adamw
+  lr_gauss_aligner: 1.0e-5
+  lr_qwen_backbone_lora: 1.0e-5
+  lr_qa_lm_head_lora: 1.0e-5
+loss:
+  mode: static
+  static_weights:
+    qa: 1.0
+scheduler:
+  name: cosine_with_min_lr
+  warmup_ratio: 0.03
+  min_lr: 1.0e-6
+checkpoint:
+  save_every_steps: 250
+  keep_last_k: 4
+distributed:
+  precision: bf16
+  zero_stage: 2
+  gradient_accumulation_steps: 1
+  activation_checkpointing:
+    qwen_lm: true
+  launcher:
+    backend: deepspeed

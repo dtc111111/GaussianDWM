@@ -1,0 +1,14 @@
+task: world
+checkpoint_ref: latest
+split: val
+dataset_names: [world_val]
+infer_id: auto
+batch_size: 1
+world:
+  num_inference_steps: 25
+  guidance_scale: 2.0
+  noise_aug_strength: 0.02
+  condition_mode: learned
+  text_condition_scale: 0.05
+  rgb_save_mode: svd_postprocess
+  export_subdir: media

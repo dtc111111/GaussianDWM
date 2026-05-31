@@ -1,0 +1,27 @@
+taxonomy_version: cvpr
+major_tasks: [qa, world]
+task_budgets:
+  qa: 0.0
+  world: 1.0
+qa_group_budgets:
+  NuInteract_2DVG: 1.0
+  NuInteract_3DVG: 1.0
+  NuInteract_RD&P: 1.0
+  NuInteract_Caption: 1.0
+  NuInteract_Planning: 1.0
+qa_subtask_budgets:
+  NuInteract_2DVG:
+    2D_perception_location: 1.0
+  NuInteract_3DVG:
+    perception: 1.0
+  NuInteract_RD&P:
+    2D_perception_infos: 1.0
+    prediction: 1.0
+    not_gt_perception: 1.0
+    interaction: 1.0
+  NuInteract_Caption:
+    caption: 1.0
+  NuInteract_Planning:
+    planning_go_straight: 1.0
+    planning_turn_left: 1.0
+    planning_turn_right: 1.0

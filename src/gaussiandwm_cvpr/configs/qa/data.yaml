@@ -1,0 +1,23 @@
+gauss:
+  pose_dir:
+  pose_template: "{scene_id}.txt"
+  utility_path:
+
+clip_text_feature:
+  root: examples/dummy_data
+
+datasets:
+  qa_train:
+    major_task: qa
+    split: train
+    annotation_path: qa_train.jsonl
+    annotation_root: examples/dummy_data
+    image_root: examples/dummy_data
+    gauss_root: examples/dummy_data
+  qa_val:
+    major_task: qa
+    split: val
+    annotation_path: qa_val.jsonl
+    annotation_root: examples/dummy_data
+    image_root: examples/dummy_data
+    gauss_root: examples/dummy_data

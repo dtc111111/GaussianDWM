@@ -1,0 +1,15 @@
+{
+  "dtype": "float32",
+  "shape": [
+    6,
+    2,
+    4,
+    56,
+    96
+  ],
+  "streams": [
+    "rgb",
+    "depth"
+  ],
+  "cache_granularity": "scene_camera_pack"
+}

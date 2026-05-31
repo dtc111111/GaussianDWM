@@ -1,0 +1,30 @@
+seed: 42
+max_steps: 15000
+logging_steps: 50
+num_workers: 4
+per_device_batch_size:
+  world: 1
+optimizer:
+  name: adamw
+  lr_world_unet_lora: 5.0e-5
+  lr_cond_fusion: 1.0e-4
+loss:
+  mode: static
+  static_weights:
+    world: 1.0
+scheduler:
+  name: cosine_with_min_lr
+  warmup_ratio: 0.03
+  min_lr: 2.0e-6
+checkpoint:
+  save_every_steps: 5000
+  keep_last_k: 6
+distributed:
+  precision: bf16
+  zero_stage: 2
+  gradient_accumulation_steps: 2
+  activation_checkpointing:
+    qwen_lm: true
+    world_unet: true
+  launcher:
+    backend: deepspeed

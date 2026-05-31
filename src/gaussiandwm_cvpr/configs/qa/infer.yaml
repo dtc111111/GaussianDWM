@@ -1,0 +1,8 @@
+task: qa
+checkpoint_ref: latest
+split: val
+dataset_names: [qa_val]
+infer_id: auto
+batch_size: 1
+qa:
+  max_new_tokens: 1024

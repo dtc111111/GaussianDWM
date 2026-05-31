@@ -4,6 +4,7 @@
 [![Paper](https://img.shields.io/badge/Paper-Arxiv-red)](http://arxiv.org/abs/2512.23180)
 [![Huggingface Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Hugging%20Face-yellow)](https://huggingface.co/datasets/xushan/GaussianDWM)
 [![Huggingface Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20DatasetGaussianSampled-Hugging%20Face-blue)](https://huggingface.co/datasets/xushan/GaussianDWM-sampled)
+[![Huggingface Model](https://img.shields.io/badge/%F0%9F%A4%97%20Model-Hugging%20Face-blue)](https://huggingface.co/dtc111/GaussianDWM)
 <!-- [![License](https://img.shields.io/badge/License-Apache%202.0-orange)](LICENSE) -->
 
 
@@ -44,8 +45,34 @@ GaussianDWM addresses three core challenges in autonomous driving world models:
 
 ## 💥 News
 
-- [2025/12]: Code is coming soon!
+- [2026/05]: The CVPR release code is available in `src/gaussiandwm_cvpr`.
+- [2026/05]: GaussianDWM model weights are available at [dtc111/GaussianDWM](https://huggingface.co/dtc111/GaussianDWM).
 
+
+---
+
+## 🚀 Code and Weights
+
+This repository contains the CVPR release package for the QA and world-generation chains. It does not include trajectory code, VGGDrive journal extensions, ViT-feature Gaussian variants, or attention-based Gaussian selection.
+
+The released model weights are hosted on Hugging Face:
+
+```text
+https://huggingface.co/dtc111/GaussianDWM
+```
+
+The public scripts load this model id by default from the repository root layout:
+
+```bash
+pip install -e ".[test]"
+
+PYTHONPATH=src python -m gaussiandwm_cvpr.scripts.train_qa --help
+PYTHONPATH=src python -m gaussiandwm_cvpr.scripts.infer_qa --help
+PYTHONPATH=src python -m gaussiandwm_cvpr.scripts.train_world --help
+PYTHONPATH=src python -m gaussiandwm_cvpr.scripts.infer_world --help
+```
+
+The code package includes synthetic dummy data under `src/gaussiandwm_cvpr/examples/dummy_data/` for contract checks only; it is not intended for reproducing paper metrics.
 
 ---
 
@@ -162,11 +189,13 @@ huggingface-cli download xushan/GaussianDWM --repo-type dataset --local-dir ./da
 If you find our work useful in your research, please consider citing:
 
 ```bibtex
-@article{deng2025gaussiandwm,
-  title={GaussianDWM: 3D Gaussian Driving World Model for Unified Scene Understanding and Multi-Modal Generation},
-  author={Deng, Tianchen and Chen, Xuefeng and Chen, Yi and Chen, Qu and Xu, Yuyao and Yang, Lijin and Xu, Le and Zhang, Yu and Zhang, Bo and Huang, Wuxiong and Wang, Hesheng},
-  journal={arXiv preprint arXiv:2512.23180},
-  year={2025}
+@InProceedings{Deng_2026_CVPR,
+    author    = {Deng, Tianchen and Chen, Xuefeng and Chen, Yi and Chen, Qu and Xu, Yuyao and Yang, Lijin and Xu, Le and Zhang, Yu and Zhang, Bo and Huang, Wuxiong and Wang, Hesheng},
+    title     = {GaussianDWM: 3D Gaussian Driving World Model for Unified Scene Understanding and Multi-Modal Generation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2026},
+    pages     = {10656-10667}
 }
 ```
 

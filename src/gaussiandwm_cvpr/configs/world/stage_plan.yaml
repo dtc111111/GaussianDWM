@@ -1,0 +1,7 @@
+stages:
+  - name: world_cvpr_finetune
+    start_step: 0
+    end_step:
+    enable_lora: true
+    trainable_modules: [cond_fusion, world_unet_lora]
+    loss_balancer_mode: static

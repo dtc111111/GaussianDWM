@@ -1,0 +1,7 @@
+stages:
+  - name: qa_cvpr_finetune
+    start_step: 0
+    end_step:
+    enable_lora: true
+    trainable_modules: [gauss_token_rows, gauss_aligner_core, qwen_backbone_lora, qa_lm_head_lora]
+    loss_balancer_mode: static
